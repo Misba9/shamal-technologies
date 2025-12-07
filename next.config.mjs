@@ -22,6 +22,11 @@ const nextConfig = {
     // Add any environment variables here
   },
   
+  // Experimental features for Tailwind CSS v4
+  experimental: {
+    optimizeCss: true,
+  },
+  
   // Headers for security and performance
   async headers() {
     return [
