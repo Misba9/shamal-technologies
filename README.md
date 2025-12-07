@@ -2,7 +2,6 @@
 
 Modern, production-ready website for Shamal Technologies - Drone & Geospatial Services in Saudi Arabia.
 
-// <CHANGE> Updated tech stack to reflect Next.js instead of Express.js
 ## Tech Stack
 
 - **Framework:** Next.js 16 with React 19
@@ -13,12 +12,17 @@ Modern, production-ready website for Shamal Technologies - Drone & Geospatial Se
 
 ## Features
 
-// ... existing code ...
+- Responsive design for all device sizes
+- Smooth scrolling navigation
+- Animated content transitions
+- Professional drone service showcase
+- Contact form and inquiry modal
+- Blog section
+- Gallery showcase
 
 ## Project Structure
 
-// <CHANGE> Updated folder structure to show Next.js app directory
-\`\`\`
+```
 shamal-technologies/
 ├── app/
 │   ├── layout.tsx          # Root layout
@@ -42,9 +46,8 @@ shamal-technologies/
 │           ├── services/   # Service images
 │           └── gallery/    # Gallery images
 └── package.json
-\`\`\`
+```
 
-// <CHANGE> Updated installation steps for Next.js
 ## Installation & Setup
 
 ### Prerequisites
@@ -56,16 +59,16 @@ shamal-technologies/
 
 1. **Clone the repository**
 
-\`\`\`bash
+```bash
 git clone <your-repo-url>
 cd shamal-technologies
-\`\`\`
+```
 
 2. **Install dependencies**
 
-\`\`\`bash
+```bash
 npm install
-\`\`\`
+```
 
 3. **Assets are included**
 
@@ -80,9 +83,9 @@ The project comes with professional drone and geospatial service images:
 
 4. **Start the development server**
 
-\`\`\`bash
+```bash
 npm run dev
-\`\`\`
+```
 
 5. **Open in browser**
 
@@ -141,25 +144,55 @@ Edit `app/globals.css` to change design tokens:
 11. Agriculture Monitoring
 12. Special Projects
 
-// <CHANGE> Updated deployment section for Next.js
 ## Deployment
 
 ### Deploy to Vercel (Recommended)
 
-\`\`\`bash
-npm run build
-\`\`\`
+This project is optimized for Vercel deployment with the included `vercel.json` configuration file.
 
-Then deploy to Vercel or any Node.js hosting platform.
+1. Push your code to GitHub/GitLab/Bitbucket
+2. Sign up/in to Vercel
+3. Click "New Project"
+4. Import your repository
+5. Vercel will automatically detect the Next.js framework
+6. Click "Deploy" - no additional configuration needed!
+
+The project includes:
+- Automatic build and deployment
+- Preview deployments for pull requests
+- Custom domain support
+- Automatic HTTPS
+- Global CDN distribution
+
+### Manual Vercel Deployment
+
+```bash
+# Install Vercel CLI globally
+npm install -g vercel
+
+# Deploy to Vercel
+vercel
+
+# For production deployment
+vercel --prod
+```
 
 ### Build for Production
 
-\`\`\`bash
+```bash
 npm run build
 npm start
-\`\`\`
+```
 
-// ... existing code ...
+## Environment Variables
+
+Create a `.env.local` file in the root directory for any environment variables:
+
+```env
+# Example environment variables
+NEXT_PUBLIC_SITE_URL=https://your-domain.com
+CONTACT_EMAIL=info@your-domain.com
+```
 
 ## Browser Support
 
@@ -173,10 +206,10 @@ npm start
 
 © 2025 Shamal Technologies. All rights reserved.
 
-// <CHANGE> Updated quick start for Next.js
 ## Quick Start
 
-\`\`\`bash
+```bash
 npm install
 npm run dev
 # Visit http://localhost:3000
+```
