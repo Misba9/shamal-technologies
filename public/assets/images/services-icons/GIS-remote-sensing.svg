@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 95.8 95.8">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke-width: 3px;
+      }
+
+      .cls-1, .cls-2 {
+        fill: none;
+        stroke: #003057;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2 {
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <path class="cls-1" d="m30.64,17.62s5.68,9.47,17.48,9.47,17.48-9.47,17.48-9.47c0,0-5.68-9.47-17.48-9.47s-17.48,9.47-17.48,9.47Z"/>
+    <circle class="cls-1" cx="48.12" cy="17.62" r="5.5"/>
+    <polygon class="cls-1" points="71.1 94.3 1.5 94.3 1.5 1.5 94.3 1.5 94.3 74.64 71.1 94.3"/>
+    <line class="cls-1" x1="84.04" y1="57.27" x2="64.96" y2="18.82"/>
+    <line class="cls-1" x1="31.49" y1="18.82" x2="12.76" y2="57.27"/>
+    <polygon class="cls-1" points="84.04 57.27 47.88 70.12 12.76 57.27 47.9 44.71 84.04 57.27"/>
+    <polyline class="cls-1" points="65.68 63.79 84.04 70.17 47.88 83.02 12.76 70.17 30.6 63.8"/>
+    <line class="cls-2" x1="47.89" y1="27.7" x2="47.88" y2="57.87"/>
+    <path class="cls-1" d="m30.6,17.72s5.71,9.52,17.56,9.52,17.56-9.52,17.56-9.52c0,0-5.71-9.52-17.56-9.52s-17.56,9.52-17.56,9.52Z"/>
+    <circle class="cls-1" cx="48.16" cy="17.72" r="5.52" transform="translate(1.57 39.25) rotate(-45)"/>
+  </g>
+</svg>
