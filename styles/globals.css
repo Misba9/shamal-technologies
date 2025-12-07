@@ -120,6 +120,35 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
+    scroll-behavior: smooth;
+    text-rendering: optimizeLegibility;
+  }
+  a,
+  button {
+    transition: color 200ms ease-out, background-color 200ms ease-out, border-color 200ms ease-out,
+      box-shadow 250ms ease, transform 200ms ease-out;
+  }
+  ::selection {
+    background: rgba(38, 96, 145, 0.12);
+    color: inherit;
+  }
+}
+
+@layer components {
+  .surface-card {
+    @apply rounded-2xl border border-white/10 bg-white/60 backdrop-blur shadow-lg transition-all duration-300 ease-out;
+  }
+
+  .hover-lift {
+    @apply transition-transform duration-300 ease-out hover:-translate-y-1 hover:shadow-xl;
+  }
+
+  .interactive-chip {
+    @apply px-3 py-1 rounded-full bg-white/70 text-gray-800 font-medium shadow-sm transition-all duration-200 ease-out hover:bg-white hover:shadow-md;
+  }
+
+  .fade-up {
+    will-change: opacity, transform;
   }
 }

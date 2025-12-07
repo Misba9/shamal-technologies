@@ -89,11 +89,16 @@ export default function Services() {
       const isInView = rect.top < window.innerHeight && rect.bottom > 0
 
       if (isInView) {
-        e.preventDefault()
+        const canScrollHorizontally = container.scrollWidth > container.clientWidth + 8
+        const atStart = container.scrollLeft <= 0
+        const atEnd = container.scrollLeft + container.clientWidth >= container.scrollWidth - 1
+        const mostlyVerticalIntent = Math.abs(e.deltaY) > Math.abs(e.deltaX)
 
-        // Scroll down (positive deltaY) = move left-to-right (decrease scrollLeft)
-        const scrollAmount = e.deltaY * 3
-        container.scrollLeft += scrollAmount
+        // Only hijack wheel when there's horizontal overflow and the user is mid-track
+        if (mostlyVerticalIntent && canScrollHorizontally && !(atStart && e.deltaY < 0) && !(atEnd && e.deltaY > 0)) {
+          e.preventDefault()
+          container.scrollLeft += e.deltaY * 1.5
+        }
       }
     }
 
@@ -102,7 +107,10 @@ export default function Services() {
   }, [])
 
   return (
-    <section id="services" className="py-20 bg-gradient-to-br from-gray-50 to-blue-50 min-h-screen flex items-center">
+    <section
+      id="services"
+      className="py-20 bg-gradient-to-br from-gray-50 to-blue-50 min-h-screen flex items-start"
+    >
       <div className="w-full">
         <div className="container mx-auto px-4 mb-12">
           <div className="text-center">
@@ -119,13 +127,13 @@ export default function Services() {
         <div className="relative">
           <div
             ref={scrollContainerRef}
-            className="flex gap-8 px-8 overflow-x-auto scrollbar-hide scroll-smooth"
+          className="flex gap-8 px-8 pb-6 overflow-x-auto scrollbar-hide scroll-smooth snap-x snap-mandatory"
             style={{ scrollBehavior: "smooth" }}
           >
             {services.map((service, index) => (
               <div
                 key={index}
-                className="flex-shrink-0 w-[400px] bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:scale-105"
+              className="flex-shrink-0 w-[400px] bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:scale-105 snap-start"
               >
                 <div className="relative h-64 overflow-hidden">
                   <Image src={service.image || "/placeholder.svg"} alt={service.title} fill className="object-cover" />
