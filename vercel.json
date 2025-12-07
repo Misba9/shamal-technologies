@@ -7,8 +7,7 @@
       "config": {
         "includeFiles": [
           "next.config.mjs",
-          "postcss.config.mjs",
-          "tailwind.config.cjs"
+          "postcss.config.mjs"
         ]
       }
     }

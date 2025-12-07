@@ -9,7 +9,7 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   
-  // Image optimization (set to false for static export if needed)
+  // Image optimization
   images: {
     unoptimized: true,
   },
@@ -20,12 +20,6 @@ const nextConfig = {
   // Environment variables (if any)
   env: {
     // Add any environment variables here
-  },
-  
-  // Experimental features
-  experimental: {
-    // Enable if using app directory
-    appDir: true,
   },
   
   // Headers for security and performance
